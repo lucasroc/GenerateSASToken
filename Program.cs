@@ -2,9 +2,7 @@
 using System.Text;
 using System.Globalization;
 using System.Security.Cryptography;
-using System.Collections;
 using System.Collections.Generic;
-using System.Buffers.Text;
 
 namespace GenerateSASToken
 {
@@ -30,6 +28,14 @@ namespace GenerateSASToken
                     var signature = Convert.ToBase64String(hash);
                     var encodedToken = string.Format("SharedAccessSignature uid={0}&ex={1:o}&sn={2}", id, expiry, signature);
                     Console.WriteLine(encodedToken);
+
+                    Environment.SetEnvironmentVariable("SASToken", encodedToken);
+                    //foreach (var variableKey in Environment.GetEnvironmentVariables().Keys)
+                    //{
+                    //    Console.WriteLine(variableKey);
+                    //}
+
+                    //Console.WriteLine("Gerado o Token:{0}", Environment.GetEnvironmentVariable("SASToken"));
                 }
             }
             catch (Exception ex)
