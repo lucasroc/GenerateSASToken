@@ -28,8 +28,9 @@ namespace GenerateSASToken
                     var signature = Convert.ToBase64String(hash);
                     var encodedToken = string.Format("SharedAccessSignature uid={0}&ex={1:o}&sn={2}", id, expiry, signature);
                     Console.WriteLine(encodedToken);
-
-                    Environment.SetEnvironmentVariable("SASToken", encodedToken);
+                    Console.WriteLine("Atribuindo token gerado a variável SASToken...");
+                    Console.WriteLine($"echo '##vso[task.setvariable variable=SASToken]{encodedToken}'");
+                    //Environment.SetEnvironmentVariable("SASToken", encodedToken);
                     //foreach (var variableKey in Environment.GetEnvironmentVariables().Keys)
                     //{
                     //    Console.WriteLine(variableKey);
