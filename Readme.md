@@ -1,9 +1,9 @@
 ﻿
-Generate SAS Token: 
+# Generate SAS Token: 
 - Criado para gerar SAS Token do Azure API Management (APIM), mas pode ser usado para qualquer serviço 
 	que atenda o formato gerado para o SAS Token.
 
-Como utilizar:
+# Como utilizar:
 	1. Abri prompt de comando e executar o arquivo GenerateSASToken.exe informando os seguintes argumentos separados por espaço:
 	- Argumento 1: Identifier. O identificador de credential obtido na configuração da REST API
 	- Argumento 2: Primary/Secondary key. Uma das keys disponíveis obtido na configuração da REST API.
