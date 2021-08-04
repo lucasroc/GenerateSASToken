@@ -2,7 +2,7 @@
   "profiles": {
     "GenerateSASToken": {
       "commandName": "Project",
-      "commandLineArgs": "integration rwrN5hOvS8a5o2sYQV/jsQikcyzJ5yMGuq3h4vrcaiDGoFWsXPHzBxWrfxdT6GJU2gpvN0XcYn+Nq7e59g7n1w=="
+      "commandLineArgs": "integration <your token>"
     }
   }
 }
